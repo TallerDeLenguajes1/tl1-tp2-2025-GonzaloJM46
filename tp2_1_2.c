@@ -4,10 +4,12 @@ int main(){
     #define N 20
     int i;
     double vt[N];
-    for(i = 0;i<N; i++)
+    double *punt = vt;
+    while(punt <= vt + N)
     {
-        vt[i]=1+rand()%100;
-        printf("%.2f ", vt[i]);
+        *punt=1+rand()%100;
+        printf("%.2f ", *punt);
+        punt++;
     }
 
     return 0;
