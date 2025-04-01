@@ -1,0 +1,2 @@
+no puedo ver el archivo tp2_1_2.c en la rama main porque yo cree ese archivo en la rama Opcion_2 y no la mergee con la rama main. 
+Las diferencias que noto son que ahora aparece en la lista de cambios confirmados de main pero no en la rama Opcion_2
