@@ -10,7 +10,7 @@ struct compu {
 };
 
 void listarPCs(struct compu pcs[], int cantidad);
-
+void mostrarMasVieja(struct compu pcs[], int cantidad);
 
 int main(){
     int aleatorio, total = 5;
@@ -29,7 +29,7 @@ int main(){
     }
 
     listarPCs(pcs, total);
-    
+    mostrarMasVieja(pcs, total);
     return 0;
 }
 
@@ -43,5 +43,21 @@ void listarPCs(struct compu pcs[], int cantidad){
         printf("\n");
     }
 }
+
+void mostrarMasVieja(struct compu pcs[], int cantidad){
+    int anio_viejo = 2026, i, mas_vieja;
+    for(int i = 0; i < cantidad; i++){
+        if(anio_viejo > pcs[i].anio){
+            anio_viejo = pcs[i].anio;
+            mas_vieja = i;
+        }
+    }
+    printf("\nlas caracteristicas de la pc mas antigua son:");
+    printf("\n%d", pcs[mas_vieja].velocidad);
+    printf("\n%d", pcs[mas_vieja].anio);
+    printf("\n%d", pcs[mas_vieja].cantidad_nucleos);
+    printf("\n%s", pcs[mas_vieja].tipo_cpu);
+}
+
 
 
